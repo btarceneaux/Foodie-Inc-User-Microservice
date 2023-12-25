@@ -10,23 +10,17 @@ pipeline {
 
     environment
     {
-        DBUN='env.'
-        DBPW='Myd@t@b@$3'
+        DBUN='env.DBUN'
+        DBPW='env.DBPW'
     }
 
-    stages {
-
-        stage('Env Stage')
-        {
-            sh 'env | sort'
+    stages {            
+        stage('Maven Compile') {
+            steps {
+                echo '----------------- Compiling project ----------'
+                sh 'mvn clean compile'
+            }
         }
-            
-        // stage('Maven Compile') {
-        //     steps {
-        //         echo '----------------- Compiling project ----------'
-        //         sh 'mvn clean compile'
-        //     }
-        // }
         
         // stage('Maven Build') {
         //      steps {
