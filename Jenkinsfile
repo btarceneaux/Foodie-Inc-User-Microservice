@@ -10,8 +10,8 @@ pipeline {
 
     environment
     {
-        DBUN=${"DBUN"}
-        DBPW=${"DBPW"}
+        DBUN="${"DBUN"}"
+        DBPW="${"DBPW"}"
     }
 
     stages {            
