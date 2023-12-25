@@ -10,14 +10,15 @@ pipeline {
 
     environment
     {
-        DBUN='env.DBUN'
-        DBPW='env.DBPW'
+        DBUN=${"DBUN"}
+        DBPW=${"DBPW"}
     }
 
     stages {            
         stage('Maven Compile') {
             steps {
                 echo '----------------- Compiling project ----------'
+                echo "User name is ${DBUN}"
                 sh 'mvn clean compile'
             }
         }
