@@ -18,7 +18,7 @@ pipeline {
         stage('Maven Compile') {
             steps {
                 echo '----------------- Compiling project ----------'
-                echo "User name is ${DBUN}"
+                echo ${"DBUN"}
                 sh 'mvn clean compile'
             }
         }
