@@ -13,6 +13,7 @@ import java.util.List;
 import java.util.Optional;
 
 @RestController
+@CrossOrigin(origins = "http://ec2-35-87-48-128.us-west-2.compute.amazonaws.com:4000")
 public class UserController
 {
     @Autowired
